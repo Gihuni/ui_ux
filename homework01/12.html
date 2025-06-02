@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>사칙연산 계산기</h2>
+    <label for="x">X</label><input type="number" name="x" id="x" placeholder=""><br>
+    <label for="y">Y</label><input type="number" name="y" id="y" placeholder="">
+    <br><br>
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('*')">*</button>
+    <button onclick="calculate('/')">/</button>
+    <button onclick="reset('')">clear</button>
+    <br><br>
+    <div id="result">결과:</div>
+
+    <script>
+        function calculate(operator) {
+            const x = parseFloat(document.querySelector('#x').value);
+            const y = parseFloat(document.querySelector('#y').value);
+            let result = '';
+
+            if (isNaN(x) || isNaN(y)) {
+                result = "숫자를 입력하세요.";
+            } else {
+                switch (operator) {
+                    case '+': result = x + y; break;
+                    case '-': result = x - y; break;
+                    case '*': result = x * y; break;
+                    case '/': result = y !== 0 ? (x / y).toFixed(2) : '0으로 나눌 수 없습니다'; break;
+                }
+            }
+
+            document.querySelector('#result').innerHTML = `결과: ${result}`;
+        }
+        function reset() {
+          document.querySelector('#x').value = '';
+          document.querySelector('#y').value = '';
+          document.querySelector('#result').innerHTML = '결과:';
+        }
+    </script>
+</body>
+</html>

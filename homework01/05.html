@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      border-radius: 5px;
+    }
+    p {
+      text-align: center;
+    }
+    body {
+      margin: 0px;
+      padding: 5px;
+    }
+    header, nav, main, section, article, aside, footer {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 5px;
+    }
+    .wrap {
+      display: flex;
+      flex-direction: column;
+      padding: 5px;
+    }
+    .top-header {
+      background: #cce;
+      color: aqua;
+    }
+    .main-content {
+      display: flex;
+    }
+    main {
+      flex: 3;
+    }
+    aside {
+      flex: 1;
+    }
+
+    .section {
+      display: flex;
+      gap: 10px;
+    }
+    .aside {
+      display: flex;
+      gap: 10px;
+    }
+    .footer-nav {
+      background: #99c;
+    }
+    .article-group{
+
+    }
+    .section-group {
+      display: flex;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <header><p> &lt;header&gt;</p></header>
+      <nav><p> &lt;nav&gt;</p></nav>
+    </header>
+
+    <div class="main-content">
+      <main>
+        <header><p> &lt;main&gt;</p></header>
+        <header><p> &lt;header&gt;</p></header>
+
+        <section class="section">
+          <p> &lt;section&gt;</p>
+          <div class="aside">
+            <article>
+              <p> &lt;article&gt;</p>
+              <footer><p> &lt;footer&gt;</p></footer>
+            </article>
+            <article>
+              <p> &lt;article&gt;</p>
+              <footer><p> &lt;footer&gt;</p></footer>
+            </article>
+          </div>
+        </section>
+        <section>
+          <div class="article-group">
+            <p> &lt;article&gt;</p>
+            <div class="section-group">
+              <article>
+                <p> &lt;section&gt;</p>
+              </article>
+              <article>
+                <p> &lt;section&gt;</p>
+              </article>
+              </div>
+          </div>
+        </section>
+        <footer><p> &lt;footer&gt;</p></footer>
+      </main>
+
+      <aside>
+        <p> &lt;aside&gt;</p>
+        <article><p> &lt;article&gt;</p></article>
+        <section><p> &lt;section&gt;</p></section>
+        <section>
+          <p> &lt;section&gt;</p>
+          <article><p> &lt;article&gt;</p></article>
+          <article><p> &lt;article&gt;</p></article>
+        </section>
+      </aside>
+    </div>
+
+    <footer>
+      <nav><p> &lt;footer&gt;</p></nav>
+      
+        <nav><p> &lt;nav&gt;</p></nav>
+     
+    </footer>
+  </div>
+</body>
+</html>

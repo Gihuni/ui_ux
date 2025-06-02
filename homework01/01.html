@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>회원가입</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th {
+      color: gray;
+      background-color: rgb(235, 235, 235);
+    }
+  </style>
+</head>
+<body>
+  <h2>회원가입</h2>
+  <h3 style="color: orange;">필수 항목</h3>
+  <form method="post" action="#">
+    <p><input type="text" name="userid" placeholder="아이디"></p>
+    <p><input type="password" name="password" placeholder="비밀번호"></p>
+    <p><input type="password" name="confirm_password" placeholder="비밀번호 확인"></p>
+    <p><input type="text" name="name" placeholder="이름"></p>
+    <p><input type="text" name="email_id" placeholder="이메일"> @ <input type="text" name="email_domain" id="email_domain" placeholder="이메일 주소"> 
+      <select name="email_domain">
+        <option value="naver.com">naver.com</option>
+        <option value="gmail.com">gmail.com</option>
+        <option value="daum.net">daum.net</option>
+      </select>
+    </p>
+
+    <p>
+      <input type="checkbox" name="over14"> 만 14세 이상입니다.<br>
+      <input type="checkbox" name="agree_terms"> 이용약관 동의<br>
+      <input type="checkbox" name="agree_privacy"> 개인정보 수집 및 이용 동의
+    </p>
+    <table>
+        <tr>
+            <th>구분</th>
+            <th>목적</th>
+            <th>항목</th>
+            <th>보유 및 이용기간</th>
+        </tr>
+        <tr>
+            <td>필수</td>
+            <td>이용자 식별, 서비스 이행을 위한 연락</td>
+            <td>이름, 아이디, 비밀번호, 이메일</td>
+            <td>회원탈퇴 후 5일까지</td>
+        </tr>
+    </table>
+    <hr style="color: rgb(189, 189, 189);">
+
+    <h3 style="color: gray;">선택 항목</h3>
+
+    <p>생년월일
+      <select name="year">
+        <option>년도</option>
+      </select>
+      <select name="month">
+        <option>월</option>
+      </select>
+      <select name="day">
+        <option>일</option>
+      </select>
+    </p>
+
+    <p>성별
+      <input type="radio" name="gender" value="male"> 남자
+      <input type="radio" name="gender" value="female"> 여자
+    </p>
+    <p>
+      <input type="checkbox" name="agree_all"> 전체동의
+      <input type="checkbox" name="birth_gender"> 생년월일과 성별 수집 및 이용 동의<br>
+      <input type="checkbox" name="email_marketing"> 이메일 마케팅 수신 동의<br>
+      <input type="checkbox" name="save_for_1_year"> 개인정보 유효기간 1년 저장
+    </p>
+
+    <p>
+      <input type="submit" value="회원가입하기">
+    </p>
+  </form>
+
+</body>
+</html>
